@@ -1,11 +1,3 @@
-/*******************************************************************
-** This code is part of Breakout.
-**
-** Breakout is free software: you can redistribute it and/or modify
-** it under the terms of the CC BY 4.0 license as published by
-** Creative Commons, either version 4 of the License, or (at your
-** option) any later version.
-******************************************************************/
 #include <algorithm>
 #include <sstream>
 
@@ -34,7 +26,7 @@ TextRenderer* Text;
 
 
 Game::Game(GLuint width, GLuint height)
-	: State(GAME_MENU), Keys(), Width(width), Height(height), Level(0), Lives(3) {
+	: State(GAME_MENU), Keys(), Width(width), Height(height), Level(1), Lives(3) {
 
 }
 
@@ -91,7 +83,7 @@ void Game::Init() {
 	this->Levels.push_back(two);
 	this->Levels.push_back(three);
 	this->Levels.push_back(four);
-	this->Level = 0;
+	this->Level = 1;
 	// Configure game objects
 	glm::vec2 playerPos = glm::vec2(this->Width / 2 - PLAYER_SIZE.x / 2, this->Height - PLAYER_SIZE.y);
 	Player = new GameObject(playerPos, PLAYER_SIZE, ResourceManager::GetTexture("paddle"));

@@ -79,6 +79,8 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
+    <LibraryPath>D:\GameProjects\2D_Game_Framework\Libary\lib;$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64)</LibraryPath>
+    <IncludePath>D:\GameProjects\2D_Game_Framework\Libary\include;$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -110,6 +112,7 @@
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
+      <AdditionalDependencies>opengl32.lib;glfw3.lib;glew32.lib;irrKlang.lib;freetype.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -149,6 +152,10 @@
     <ClCompile Include="game.cpp" />
     <ClCompile Include="game_level.cpp" />
     <ClCompile Include="game_object.cpp" />
+    <ClCompile Include="lib\image_dxt.c" />
+    <ClCompile Include="lib\image_helper.c" />
+    <ClCompile Include="lib\soil.c" />
+    <ClCompile Include="lib\stb_image_aug.c" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="post_processor.cpp" />
     <ClCompile Include="power_up.cpp" />
@@ -172,6 +179,12 @@
     <ClInclude Include="sprite_renderer.h" />
     <ClInclude Include="texture.h" />
     <ClInclude Include="text_renderer.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="glew32.dll" />
+    <None Include="ikpFlac.dll" />
+    <None Include="ikpMP3.dll" />
+    <None Include="irrKlang.dll" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

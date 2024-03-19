@@ -54,6 +54,18 @@
     <ClCompile Include="post_processor.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="lib\soil.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\image_dxt.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\image_helper.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\stb_image_aug.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="game.h">
@@ -92,5 +104,19 @@
     <ClInclude Include="post_processor.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="glew32.dll">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="irrKlang.dll">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="ikpFlac.dll">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="ikpMP3.dll">
+      <Filter>Source Files</Filter>
+    </None>
   </ItemGroup>
 </Project>
